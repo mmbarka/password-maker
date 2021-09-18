@@ -26,7 +26,6 @@ function generatePassword()
 
     generateButton.textContent = 'Copied !';
     document.execCommand("copy");
-    console.log(passwordLength.value)
     setTimeout(() =>{generateButton.textContent = 'Génerer un mot de passe'
         },
     2000);
