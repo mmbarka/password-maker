@@ -3,7 +3,7 @@ const dataUppercase = dataLowercase.toUpperCase();
 const dataNumbers = "0123456789";
 const dataSymbols = "^$ù*,;:!?./§%µ¨£&\"'(-_@)";
 
-const data = [];
+let data = [];
 const passwordLength= document.getElementById("display-password-length");
 const passwordOutput= document.getElementById("password-output");
 let password = '';
@@ -21,15 +21,16 @@ function generatePassword()
     }
 
     passwordOutput.value = password;
-
+    password = '';
     passwordOutput.select();
 
     generateButton.textContent = 'Copied !';
     document.execCommand("copy");
-
+    console.log(passwordLength.value)
     setTimeout(() =>{generateButton.textContent = 'Génerer un mot de passe'
         },
     2000);
+
     
 }
 
